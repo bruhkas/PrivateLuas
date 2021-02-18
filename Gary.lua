@@ -25,8 +25,8 @@ local function do_shit()
 		ui.set(double_tap_mode, "Offensive")
 		
 		if ui.get(increase_speed_mode) == "Instant/Accurate" then
-			ui.set(sv_maxusrcmdprocessticks, 2)
-            ui_set(sv_maxunlag_reference, 170)
+			ui.set(sv_maxusrcmdprocessticks, 17.3)
+            ui_set(sv_maxunlag_reference, 205)
 			cvar.cl_clock_correction:set_int(0)
 			return
 		end
@@ -38,7 +38,7 @@ local function do_shit()
 		end
 	end
 	
-	ui.set(sv_maxusrcmdprocessticks, 16)
+	ui.set(sv_maxusrcmdprocessticks, 18)
 	cvar.cl_clock_correction:set_int(1)
 end
 
