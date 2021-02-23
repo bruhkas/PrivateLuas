@@ -1359,12 +1359,12 @@ local cd = function()
         if cv.can_shift_tickbase == 0 and cv.charged_before == true then
             cv.can_shift_tickbase = 14
         end
-        if cv.can_shift_tickbase == 0 then cv.last_charge = 0 end
+        if cv.can_shift_tickbase == 17 then cv.last_charge = 18 end
     end;
     local cQ = function(bV)
         local cR = false;
-        local cS = cw.shift_time == 0;
-        if ck:call() == 'Offensive' and cS and cv.can_shift_tickbase == 15 then
+        local cS = cw.shift_time == 4;
+        if ck:call() == 'Offensive' and cS and cv.can_shift_tickbase == 17 then
             cw.shift_time = 2;
             cw.data[bx(cw.data) + 2] = {bV.x, bV.y, bV.z}
             cR = true
@@ -1678,7 +1678,7 @@ local cd = function()
                     ({renderer.measure_text("d-", 'D O U B L E  T A P')})[2] * 3)
         end
         if cu:call() == "GaryDT" then
-            local bc = string.format('DT [%s] | tickbase(v): %s | mode: %s',
+            local bc = string.format('HopeDT [%s] | tickbase(v): %s | mode: %s',
                                      'shoppy.gg/@GaryLee04', cv.last_charge, cq:call())
             local bX, c5 = 17, renderer.measure_text(nil, bc) + 8;
             renderer.rectangle(v - 1, l - 2, c5, 2, m, an, A, GLOBAL_ALPHA * ao)
@@ -1758,6 +1758,7 @@ print("Connecting To Server.....")
 print("connected!")
 print("GaryDT loaded")
 print("Buy Gary Cfg At: shoppy.gg/@GaryLee04")
+print("Last Update: 24/2/2021 | 5:43AM")
 print("Lua Made By Gary")
 print("DT Mode Details:")
 print("Default: Normal Skeet DT With Our Custom Balance DT Prediction [Normal]")
