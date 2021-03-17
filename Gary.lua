@@ -1286,7 +1286,7 @@ local cd = function()
         lag_state = nil,
         delay = 0
     }
-    local cw = {data = {}, shift_time = 10, shift_data = {}}
+    local cw = {data = {}, shift_time = 11, shift_data = {}}
     local cx = function()
         if cv.lag_state ~= nil and cv.can_break_lby then
             cj:set(cv.lag_state)
@@ -1359,12 +1359,12 @@ local cd = function()
         if cv.can_shift_tickbase == 0 and cv.charged_before == true then
             cv.can_shift_tickbase = 14
         end
-        if cv.can_shift_tickbase == 17 then cv.last_charge = 18 end
+        if cv.can_shift_tickbase == 18 then cv.last_charge = 19 end
     end;
     local cQ = function(bV)
         local cR = false;
         local cS = cw.shift_time == 4;
-        if ck:call() == 'Offensive' and cS and cv.can_shift_tickbase == 17 then
+        if ck:call() == 'Offensive' and cS and cv.can_shift_tickbase == 18 then
             cw.shift_time = 2;
             cw.data[bx(cw.data) + 2] = {bV.x, bV.y, bV.z}
             cR = true
@@ -1758,7 +1758,7 @@ print("Connecting To Server.....")
 print("connected!")
 print("GaryDT loaded")
 print("Buy Gary Cfg At: shoppy.gg/@GaryLee04")
-print("Last Update: 24/2/2021 | 5:43AM")
+print("Last Update: 17/3/2021 | 5:48PM")
 print("Lua Made By Gary")
 print("DT Mode Details:")
 print("Default: Normal Skeet DT With Our Custom Balance DT Prediction [Normal]")
